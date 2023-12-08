@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "46941370097",
+    "project_id": "neon-8ab68",
+    "storage_bucket": "neon-8ab68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46941370097:android:bfd6194fd363005e471b50",
+        "android_client_info": {
+          "package_name": "com.example.project_tomatogame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDg73rAWFbKLZCzePK8K5ggUZyY1O-v6cc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
