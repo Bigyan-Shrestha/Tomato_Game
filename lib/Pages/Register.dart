@@ -142,6 +142,9 @@ class RegisterPage extends State<MyRegisterPage> {
                         controller: _displayNameController,
                         keyboardType: TextInputType.name,
                         decoration: InputDecoration(
+                            labelStyle: TextStyle(
+                              color: Colors.black54,
+                            ),
                             labelText: 'Display Name  *',
                             filled: true,
                             fillColor: Colors.black26),
@@ -157,6 +160,9 @@ class RegisterPage extends State<MyRegisterPage> {
                             controller: _firstNameController,
                             keyboardType: TextInputType.name,
                             decoration: InputDecoration(
+                                labelStyle: TextStyle(
+                                  color: Colors.black54,
+                                ),
                                 labelText: '  First Name  *',
                                 filled: true,
                                 fillColor: Colors.black26,
@@ -173,6 +179,9 @@ class RegisterPage extends State<MyRegisterPage> {
                             controller: _lastNameController,
                             keyboardType: TextInputType.name,
                             decoration: InputDecoration(
+                                labelStyle: TextStyle(
+                                  color: Colors.black54,
+                                ),
                                 labelText: '  Last Name  *',
                                 filled: true,
                                 fillColor: Colors.black26,
@@ -191,6 +200,9 @@ class RegisterPage extends State<MyRegisterPage> {
                         controller: _phoneController,
                         keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black54,
+                          ),
                           labelText: 'Phone  *',
                           filled: true,
                           fillColor: Colors.black26,
@@ -207,6 +219,9 @@ class RegisterPage extends State<MyRegisterPage> {
                         controller: _countryController,
                         keyboardType: TextInputType.name,
                         decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black54,
+                          ),
                             labelText: 'Country  *',
                             filled: true,
                             fillColor: Colors.black26,
@@ -223,6 +238,9 @@ class RegisterPage extends State<MyRegisterPage> {
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
+                            labelStyle: TextStyle(
+                              color: Colors.black54,
+                            ),
                             labelText: 'Email Address  *',
                             filled: true,
                             fillColor: Colors.black26,
@@ -240,6 +258,9 @@ class RegisterPage extends State<MyRegisterPage> {
                         controller: _passwordController,
                         keyboardType: TextInputType.visiblePassword,
                         decoration: InputDecoration(
+                            labelStyle: TextStyle(
+                              color: Colors.black54,
+                            ),
                             labelText: 'Password  *',
                             filled: true,
                             fillColor: Colors.black26,
@@ -308,21 +329,6 @@ class RegisterPage extends State<MyRegisterPage> {
                     SizedBox(
                       height: 2,
                     ),
-                    /*CheckboxListTile(
-                      activeColor: Colors.black54,
-                      title: Text(
-                        'I have read and agree to Terms of Service.',
-                        style: TextStyle(
-                          color: Colors.black38,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic,
-                          fontSize: 12,
-                        ),
-                      ),
-                      value: true,
-                      onChanged: (newValue) {},
-                      controlAffinity: ListTileControlAffinity.leading,
-                    ),*/
                     SizedBox(
                       height: 2,
                     ),

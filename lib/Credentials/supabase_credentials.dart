@@ -5,5 +5,4 @@ class SupabaseCredentials{
   static const String APIURL = "https://rnowluzzzxtzeeirudcj.supabase.co";
 
   static SupabaseClient supabaseClient = SupabaseClient(APIURL, APIKEY);
-
 }

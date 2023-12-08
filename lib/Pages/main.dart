@@ -4,8 +4,8 @@ import 'package:awesome_dialog/awesome_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:project_tomatogame/Credentials/supabase_credentials.dart';
-import 'package:project_tomatogame/Login.dart';
-import 'package:project_tomatogame/homeScreen.dart';
+import 'package:project_tomatogame/Pages/Login.dart';
+import 'package:project_tomatogame/Pages/homeScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -96,30 +96,9 @@ class _MyHomePageState extends State<MyHomePage> {
     await prefs.setInt('myVar', myVar);
   }
 
-  //Function to insert the high score data......................................STORE FUNCTION ...HIGH SCORE
-  /*Future<void> insertData() async {
-    final currentUser = supabase.auth.currentUser;
-    final response = await supabase
-        .from('high_scores')
-        .upsert([
-      {
-        'id': currentUser?.id,
-        'name': userData.username,
-        'email': userData.email,
-        // Add other fields as needed
-      },
-    ]);
-    if (response.error != null) {
-      print('Error inserting data: ${response.error!.message}');
-    } else {
-      print('Data inserted successfully');
-    }
-  }*/
-
   //Function to Get the high score data.........................................GET VALUE FUNCTION ...HIGH SCORE
   Future<void> fetchData() async {
     final response = await supabase.from('high_score').select();
-
     if (response.error != null) {
       print('Error fetching data: ${response.error!.message}');
     } else {
@@ -224,6 +203,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             );
                           },
+
+                          //Incrementing Score variable for correct answer......INCREMENTING SCORE VARIABLE
                           btnOkOnPress: () {
                             setState(() {
                               myVar = myVar + 10; // Update myVar value
@@ -233,12 +214,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             print('You have scored $myVar points');
                           },
                         ).show();
-                        /* } else if (tomatoData?['solution'].toString() ==
-                          null.toString()) {
-                        // Validation failed, show an error message or handle accordingly
-                        print('Please Enter Solution.');*/
                       } else {
-                        // Validation failed, show an error message or handle accordingly
+
                         print('Incorrect');
                         AwesomeDialog(
                           context: context,
@@ -248,11 +225,10 @@ class _MyHomePageState extends State<MyHomePage> {
                           animType: AnimType.bottomSlide,
                           btnCancelText: "RETURN TO HOME",
                           title: 'GAME OVER',
-                          // padding: const EdgeInsets.all(5.0),
+
                           desc: 'Wrong Answer.',
                           btnCancelOnPress: () async {
                             //insertCurrentUser();
-
                             final currentUser = supabase.auth.currentUser;
                             if (currentUser != null) {
                               print(myVar);

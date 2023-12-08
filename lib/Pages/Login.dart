@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project_tomatogame/Credentials/supabase_authentication.dart';
-import 'package:project_tomatogame/homeScreen.dart';
+import 'package:project_tomatogame/Pages/homeScreen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'Register.dart';
 
@@ -17,8 +17,8 @@ class LoginScreen extends StatefulWidget {
 class LoginPage extends State<LoginScreen> {
   late AuthenticationService _authenticationService;
   bool _loading = false;
-  final _emailController = TextEditingController(text:'bigyan.shrestha@patancollege.edu.np');
-  final _passwordController = TextEditingController(text:'games123');
+  final _emailController = TextEditingController(text:'cyberpunkstha@gmail.com');
+  final _passwordController = TextEditingController(text:'123games');
 
   //Initializing Authentication Service.........................................Function
   void initState() {
@@ -111,12 +111,15 @@ class LoginPage extends State<LoginScreen> {
                       height: 60,
                     ),
                     Container(
-                      height: 45,
-                      width: 250,
+                      height: 55,
+                      width: 400,
                       child: TextField(
                         controller: _emailController,
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black54,
+                          ),
                           labelText: 'Email Address.',
                           filled: true,
                           fillColor: Colors.black26,
@@ -128,12 +131,15 @@ class LoginPage extends State<LoginScreen> {
                       height: 2,
                     ),
                     Container(
-                      height: 45,
-                      width: 250,
+                      height: 55,
+                      width: 400,
                       child: TextField(
                         controller: _passwordController,
                         obscureText: true,
                         decoration: InputDecoration(
+                          labelStyle: TextStyle(
+                            color: Colors.black54,
+                          ),
                           labelText: 'Password.',
                           filled: true,
                           fillColor: Colors.black26,
@@ -237,38 +243,14 @@ class LoginPage extends State<LoginScreen> {
                     const SizedBox(
                       height: 10,
                     ),
+
                     Text(
-                      'Or',
+                      '"You need to have Neon Account to play tomato game."',
                       style: TextStyle(
-                          color: Colors.black54, fontWeight: FontWeight.bold),
+                          color: Colors.black87, fontWeight: FontWeight.bold, fontStyle:FontStyle.italic,),
                     ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    Text(
-                      'Login Using.',
-                      style: TextStyle(
-                          color: Colors.black54, fontWeight: FontWeight.bold),
-                    ),
-                    const SizedBox(
-                      height: 2,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        ElevatedButton.icon(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.black38,
-                            foregroundColor: Colors.white70,
-                          ),
-                          onPressed: () async {},
-                          icon: const Icon(
-                            FontAwesomeIcons.google,
-                          ),
-                          label: const Text('Sign in with Google'),
-                        ),
-                      ],
-                    ),
+
+
                   ],
                 ),
               ),

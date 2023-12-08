@@ -25,11 +25,6 @@ class AuthenticationService{
     //print(response);
   }
 
-
-
-
-
-
   Future<void> logInUsingEmailPassword({
     required String email,
     required String password,
